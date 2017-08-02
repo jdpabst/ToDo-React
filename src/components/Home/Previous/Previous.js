@@ -6,13 +6,13 @@ import './Previous.css';
 class Previous extends Component {
 
   render() {
-      let arr = this.props.list;
+    let arr = this.props.list;
     return (
       <div className="previous">
           <section id="previous_lists">
             {arr.map( (item, id) => {
                 return <div key={ id } id="lists">
-                        <h2>{ list.title }</h2>
+                        <h2>{ item }</h2>
                     </div>
             })}
           </section>
