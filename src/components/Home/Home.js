@@ -10,7 +10,7 @@ class Home extends Component {
   constructor(props){
     super(props);
     this.state = {
-      list: ['Clean', 'Groceries', 'Christmas Ideas']
+      list: ['Clean', 'Groceries', 'Christmas Ideas', 'Things for cats', 'Work Ideas', 'Home Ideas']
     }
   }
 

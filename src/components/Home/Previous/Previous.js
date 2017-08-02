@@ -12,7 +12,10 @@ class Previous extends Component {
           <section id="previous_lists">
             {arr.map( (item, id) => {
                 return <div key={ id } id="lists">
-                        <h2>{ item }</h2>
+                        <div className="list_word_holder">
+                            <h2>{ item }</h2>
+                            <div id="arrow_img"></div>
+                        </div>
                     </div>
             })}
           </section>

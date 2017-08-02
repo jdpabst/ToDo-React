@@ -9,4 +9,29 @@
     background: #C1BE90;
     position: relative;
     top: 150px;
+    margin-top: 10px;
+}
+.list_word_holder{
+    height: 100%;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+}
+#lists h2{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    font-family: 'Ubuntu', sans-serif;
+}
+#arrow_img{
+    height: 50px;
+    width: 50px;
+    background: url(http://www.iconninja.com/files/881/983/801/arrows-right-arrows-double-arrow-doublechevronright-icon.png) center no-repeat;
+    background-size: cover;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    right: 0;
+    top: 15px;
 }
