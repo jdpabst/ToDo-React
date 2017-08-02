@@ -36,7 +36,7 @@ class Custom extends Component {
     }
     handleColorGreen(){
         this.setState({
-            color: '#FE2B2B'
+            color: '#83FE4E'
         })
     }
     handleColorOrange(){
@@ -49,7 +49,7 @@ class Custom extends Component {
     let color = this.state.color;
     return (
       <div className="custom">
-          <div id="color" style={{color: { color }}}></div>
+          <div id="color" style={{background: color}}></div>
       </div>
     );
   }
