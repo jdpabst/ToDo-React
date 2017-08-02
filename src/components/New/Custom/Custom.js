@@ -13,6 +13,10 @@ class Custom extends Component {
             checkboxes: 'false'
         }
         this.handleColorYellow = this.handleColorYellow.bind(this);
+        this.handleColorBlue = this.handleColorBlue.bind(this);
+        this.handleColorPink = this.handleColorPink.bind(this);
+        this.handleColorGreen = this.handleColorGreen.bind(this);
+        this.handleColorOrange = this.handleColorOrange.bind(this);
     }
 
     handleColorYellow(){
@@ -42,9 +46,10 @@ class Custom extends Component {
     }
 
   render() {
+    let color = this.state.color;
     return (
       <div className="custom">
-          <div id="color" style={ this.state.color }></div>
+          <div id="color" style={{color: { color }}}></div>
       </div>
     );
   }
