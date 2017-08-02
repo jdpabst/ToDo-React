@@ -11,7 +11,8 @@ class Custom extends Component {
         this.state = {
             color: 'white',
             font: "Ubuntu', sans-serif",
-            checkboxes: 'false'
+            checkboxes: 'false',
+            modal: false
         }
         this.handleColorYellow = this.handleColorYellow.bind(this);
         this.handleColorBlue = this.handleColorBlue.bind(this);
@@ -50,6 +51,19 @@ class Custom extends Component {
         this.setState({
             color: '#FE8C6F'
         })
+    }
+    handleModal(){
+        if(!this.state.modal){
+            document.getElementById('modal').style.display = 'block'
+            this.setState({
+                modal: true,
+            })
+        } else {
+            document.getElementById('modal').style.display = 'none'
+            this.setState({
+                modal: false,
+            })
+        }
     }
 
   render() {
