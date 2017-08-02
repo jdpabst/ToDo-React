@@ -13,9 +13,11 @@
     height: 50px;
     width: 100%;
 }
-input, select, textarea{
+input{
     color: white;
-    font-size: 20px;
+    font-size: 25px;
+    padding-left: 15px;
+    font-family: 'Ubuntu', sans-serif;
 }
 input::-webkit-input-placeholder {
 color: white !important;
