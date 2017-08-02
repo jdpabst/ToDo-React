@@ -11,7 +11,7 @@ class Custom extends Component {
         this.state = {
             color: 'white',
             font: "Ubuntu', sans-serif",
-            checkboxes: 'false',
+            checkboxes: false,
             modal: false
         }
         this.handleColorYellow = this.handleColorYellow.bind(this);
@@ -20,6 +20,7 @@ class Custom extends Component {
         this.handleColorGreen = this.handleColorGreen.bind(this);
         this.handleColorOrange = this.handleColorOrange.bind(this);
         this.handleColorCoral = this.handleColorCoral.bind(this);
+        this.handleModal = this.handleModal.bind(this)
     }
 
     handleColorYellow(){
@@ -71,7 +72,9 @@ class Custom extends Component {
     return (
       <div className="custom">
           <div id="color" style={{background: color}} onClick={ this.handleModal }></div>
-          <Color id='modal' coral = {this.handleColorCoral} yellow = {this.handleColorYellow} blue={this.handleColorBlue} pink={this.handleColorPink} green={this.handleColorGreen} orange={this.handleColorOrange} />
+          <div id='modal'>
+              <Color coral = {this.handleColorCoral} yellow = {this.handleColorYellow} blue={this.handleColorBlue} pink={this.handleColorPink} green={this.handleColorGreen} orange={this.handleColorOrange} />
+          </div>
       </div>
     );
   }
