@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NewList from './NewList/NewList';
+// import NewList from './NewList/NewList';
 
 import './Home.css';
 
@@ -10,7 +10,7 @@ class Home extends Component {
     return (
       <div className="home">
         <h1>Welcome!</h1>
-        <NewList/>
+        {/* <NewList/> */}
       </div>
     );
   }
