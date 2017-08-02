@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import Color from './Color/Color.js';
 import './Custom.css';
 
 
@@ -17,6 +18,7 @@ class Custom extends Component {
         this.handleColorPink = this.handleColorPink.bind(this);
         this.handleColorGreen = this.handleColorGreen.bind(this);
         this.handleColorOrange = this.handleColorOrange.bind(this);
+        this.handleColorCoral = this.handleColorCoral.bind(this);
     }
 
     handleColorYellow(){
@@ -44,12 +46,18 @@ class Custom extends Component {
             color: '#FEAC4E'
         })
     }
+     handleColorCoral(){
+        this.setState({
+            color: '#FE8C6F'
+        })
+    }
 
   render() {
     let color = this.state.color;
     return (
       <div className="custom">
-          <div id="color" style={{background: color}}></div>
+          <div id="color" style={{background: color}} onClick={ this.handleModal }></div>
+          <Color id='modal' coral = {this.handleColorCoral} yellow = {this.handleColorYellow} blue={this.handleColorBlue} pink={this.handleColorPink} green={this.handleColorGreen} orange={this.handleColorOrange} />
       </div>
     );
   }

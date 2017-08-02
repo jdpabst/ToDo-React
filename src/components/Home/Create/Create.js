@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './Create.css';
 
@@ -9,12 +9,13 @@ class Create extends Component {
   render() {
     return (
       <div className="create"> 
-        <Link to='/new' style={{textDecoration: 'none'}}>
           <section id="word_holder">
               <h2>Create New List</h2>
+              <Link to='/new'>
               <div id='arrow'></div>
+              </Link> 
           </section>
-        </Link> 
+        
       </div>
     );
   }

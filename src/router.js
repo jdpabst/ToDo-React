@@ -13,6 +13,5 @@ export default (
         <Route component={ Home } path='/' exact />
         <Route component={ New } path='/new' />
         {/* <Route component={ Previous } path='/previous' /> */}
-
     </Switch>
 )

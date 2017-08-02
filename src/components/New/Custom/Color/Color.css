@@ -1,0 +1,39 @@
+.color{
+    height: 125px;
+    width: 80px;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    top: 5px;
+    padding-top: 5px;
+}
+.color div{
+    height: 25px;
+    width: 25px;
+    margin: 5px 5px;
+    /* border: 1px solid black; */
+    box-shadow: 1.5px 1.5px 1.5px 1.5px lightgray;
+}
+.color div:hover{
+    cursor: pointer;
+}
+#yellow{
+    background: #FEF243;
+}
+#blue{
+    background: #4293FE;
+}
+#pink{
+    background: #FE5E6E;
+}
+#green{
+    background: #83FE4E;
+}
+#orange{
+    background: #FEAC4E;
+}
+#coral{
+    background: #FE8C6F;
+}
