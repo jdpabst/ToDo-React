@@ -8,26 +8,43 @@ class Custom extends Component {
     constructor(props){
         super(props);
         this.state = {
-            background: '',
-            font: '',
-            checkboxes: ''
+            color: 'white',
+            font: "Ubuntu', sans-serif",
+            checkboxes: 'false'
         }
-        this.divStyle = this.divStyle.bind(this);
+        this.handleColorYellow = this.handleColorYellow.bind(this);
     }
 
-    divStyle(str){
+    handleColorYellow(){
         this.setState({
-            background: str
+            color: '#FEF243'
         })
     }
-    handleColorChange(){
-
+    handleColorBlue(){
+        this.setState({
+            color: '#4293FE'
+        })
+    }
+    handleColorPink(){
+        this.setState({
+            color:'#FE5E6E'
+        })
+    }
+    handleColorGreen(){
+        this.setState({
+            color: '#FE2B2B'
+        })
+    }
+    handleColorOrange(){
+        this.setState({
+            color: '#FEAC4E'
+        })
     }
 
   render() {
     return (
       <div className="custom">
-          <div id="background" style={ this.state.background } onClick={ this.handleColorChange }></div>
+          <div id="color" style={ this.state.color }></div>
       </div>
     );
   }
