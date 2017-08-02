@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import NewList from './NewList/NewList';
+import { Link } from 'react-router-dom';
 
 import './Create.css';
 
@@ -9,10 +9,12 @@ class Create extends Component {
   render() {
     return (
       <div className="create">
+       <Link to='/create'> 
         <section id="word_holder">
-            <h2>Create New List</h2>
-            <div id='arrow'></div>
-        </section>
+                <h2>Create New List</h2>
+                <div id='arrow'></div>
+            </section> 
+        </Link>
       </div>
     );
   }
