@@ -14,7 +14,8 @@
     height: auto;
     width: 276px;
     top: 50px;
-    color: #F0ECB9;
+    /* color: #F0ECB9; */
+    color: white;
     font-family: 'Bowlby One SC', cursive;
     /* border: 2px solid lawngreen; */
 }

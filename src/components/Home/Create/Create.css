@@ -1,0 +1,48 @@
+.create{
+    height: 90px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background: #FE6150;
+    position: relative;
+    top: 150px;
+}
+#word_holder{
+    /* border: 2px solid black; */
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+}
+.create h2{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Bowlby One SC', cursive; */
+    /* font-weight: 100; */
+    /* left: 15px; */
+}
+#arrow{
+    height: 50px;
+    width: 50px;
+    background: url(https://d30y9cdsu7xlg0.cloudfront.net/png/286072-200.png) center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: calc(50% - 30px);
+    right: 0;
+    filter: invert(100%);
+    border-radius: 50%;
+}
+@media(max-width: 363px){
+    #word_holder{
+        width: 100%;
+        padding: 0 10px;
+    }
+    #arrow{
+        right: 10px;
+    }
+}
