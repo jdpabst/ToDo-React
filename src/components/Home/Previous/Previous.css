@@ -1,0 +1,10 @@
+.previous{
+    height: 90px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background: #C1BE90;
+    position: relative;
+    top: 150px;
+}
