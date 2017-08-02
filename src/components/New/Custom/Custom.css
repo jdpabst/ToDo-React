@@ -15,4 +15,16 @@
 }
 #modal{
     display:none;
+    /* height: 100%;
+    width: 100%;
+    background: white;
+    border: 2px solid lime; */
 }
+/* #close{
+    height: 10px;
+    width: 10px;
+    background: lime;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+} */
