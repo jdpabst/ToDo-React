@@ -127,13 +127,17 @@ class Custom extends Component {
     handleCheck(){
         if(this.state.check){
             document.getElementById('check_img').style.display = 'block';
+            document.getElementById('checkbox').style.display = 'block';
             this.setState({
-                check: false
+                check: false,
+                checkbox: false
             })
         } else{
             document.getElementById('check_img').style.display = 'none';
+            document.getElementById('checkbox').style.display = 'none';
             this.setState({
-                check: true
+                check: true,
+                checkbox: true
             })
         }
     }
