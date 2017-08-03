@@ -23,6 +23,11 @@ class Custom extends Component {
         this.handleColorCoral = this.handleColorCoral.bind(this);
         this.handleColorModal = this.handleColorModal.bind(this);
         this.closeColorModal = this.closeColorModal.bind(this);
+        this.handleFont1 = this.handleFont1.bind(this);
+        this.handleFont2 = this.handleFont2.bind(this);
+        this.handleFont3 = this.handleFont3.bind(this);
+        this.handleFontModal = this.handleFontModal.bind(this);
+        this.closeFontModal = this.closeFontModal.bind(this);
     }
 
     handleColorYellow(){
@@ -84,30 +89,53 @@ class Custom extends Component {
     ////////////////////////////////////////////FONTS//////////////////////////////////////////////////////////////////////
     handleFont1(){
         this.setState({
-            font:"'Oswald', sans-serif",
+            font:"'Ubuntu', sans-serif",
+            size: '24px'
         })
+        this.closeFontModal();
     }
     handleFont2(){
         this.setState({
             font:"'Amatic SC', cursive",
+            size: '30px'
         })
+        this.closeFontModal();
     }
     handleFont3(){
         this.setState({
             font:"'Satisfy', cursive",
+            size: '24px'
         })
+        this.closeFontModal();
+    }
+    handleFontModal(){
+        if(!this.state.modal){
+            document.getElementById('font_modal').style.display = 'block'
+            this.setState({
+                modal: true,
+            })
+        }
+    }
+    closeFontModal(){
+        document.getElementById('font_modal').style.display = 'none'
+            this.setState({
+                modal: false,
+            })
     }
 
   render() {
     let color = this.state.color;
     let font=this.state.font;
+    let size = this.state.size;
     return (
       <div className="custom">
           <div id="color" style={{background: color}} onClick={ this.handleColorModal }></div>
-          <div id="font" style={{'font-family': font}} style={{color: color}}>Aa</div>
+          <div id="font" style={{'font-family': font, color: color, 'font-size': size}} onClick={this.handleFontModal} >Aa</div>
           <div id='color_modal'>
               <Color coral = {this.handleColorCoral} yellow = {this.handleColorYellow} blue={this.handleColorBlue} pink={this.handleColorPink} green={this.handleColorGreen} orange={this.handleColorOrange} />
-              <Font oswald={this.handleFont1} amatic={this.handleFont2} satisfy={this.handleFont3}/>
+          </div>
+          <div id="font_modal">
+              <Font ubuntu={this.handleFont1} amatic={this.handleFont2} satisfy={this.handleFont3}/>
           </div>
       </div>
     );

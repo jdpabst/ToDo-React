@@ -9,12 +9,9 @@ class Font extends Component {
   render() {
     return (
       <div className="font">
-          <div id='yellow' onClick={this.props.yellow}></div>
-          <div id='blue' onClick={this.props.blue}></div>
-          <div id='pink' onClick={this.props.pink}></div>
-          <div id='green' onClick={this.props.green}></div>
-          <div id='orange' onClick={this.props.orange}></div>
-          <div id='coral' onClick={this.props.coral}></div>
+          <div id='ubuntu' onClick={this.props.ubuntu}>Ubuntu</div>
+          <div id='amatic' onClick={this.props.amatic}>amatic</div>
+          <div id='satisfy' onClick={this.props.satisfy}>Satisfy</div>
       </div>
     );
   }
