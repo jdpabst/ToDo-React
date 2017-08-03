@@ -13,18 +13,12 @@
     top: 5px;
     left: 5px;
 }
-#modal{
-    display:none;
-    /* height: 100%;
-    width: 100%;
-    background: white;
-    border: 2px solid lime; */
-}
-/* #close{
-    height: 10px;
-    width: 10px;
-    background: lime;
+#font{
     position: absolute;
-    right: 10px;
-    top: 10px;
-} */
+    top: 5px;
+    left: 55px;
+    font-size: 24px;
+}
+#color_modal{
+    display:none;
+}

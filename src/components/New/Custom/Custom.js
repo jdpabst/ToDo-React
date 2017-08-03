@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import Color from './Color/Color.js';
+import Font from './Font/Font';
 import './Custom.css';
 
 
@@ -20,74 +21,93 @@ class Custom extends Component {
         this.handleColorGreen = this.handleColorGreen.bind(this);
         this.handleColorOrange = this.handleColorOrange.bind(this);
         this.handleColorCoral = this.handleColorCoral.bind(this);
-        this.handleModal = this.handleModal.bind(this);
-        this.closeModal = this.closeModal.bind(this);
+        this.handleColorModal = this.handleColorModal.bind(this);
+        this.closeColorModal = this.closeColorModal.bind(this);
     }
 
     handleColorYellow(){
         this.setState({
             color: '#FEF243'
         })
-        this.closeModal();
+        this.closeColorModal();
     }
     handleColorBlue(){
         this.setState({
             color: '#4293FE'
         })
-        this.closeModal();
+        this.closeColorModal();
     }
     handleColorPink(){
         this.setState({
             color:'#FE5E6E'
         })
-        this.closeModal();
+        this.closeColorModal();
     }
     handleColorGreen(){
         this.setState({
             color: '#83FE4E'
         })
-        this.closeModal();
+        this.closeColorModal();
     }
     handleColorOrange(){
         this.setState({
             color: '#FEAC4E'
         })
-        this.closeModal();
+        this.closeColorModal();
     }
      handleColorCoral(){
         this.setState({
             color: '#FE8C6F'
         })
-        this.closeModal();
+        this.closeColorModal();
     }
-    handleModal(){
+    handleColorModal(){
         if(!this.state.modal){
-            document.getElementById('modal').style.display = 'block'
+            document.getElementById('color_modal').style.display = 'block'
             this.setState({
                 modal: true,
             })
         } else {
-            document.getElementById('modal').style.display = 'none'
+            document.getElementById('color_modal').style.display = 'none'
             this.setState({
                 modal: false,
             })
         }
     }
-    closeModal(){
-        document.getElementById('modal').style.display = 'none'
+    closeColorModal(){
+        document.getElementById('color_modal').style.display = 'none'
             this.setState({
                 modal: false,
             })
     }
 
+    ////////////////////////////////////////////FONTS//////////////////////////////////////////////////////////////////////
+    handleFont1(){
+        this.setState({
+            font:"'Oswald', sans-serif",
+        })
+    }
+    handleFont2(){
+        this.setState({
+            font:"'Amatic SC', cursive",
+        })
+    }
+    handleFont3(){
+        this.setState({
+            font:"'Satisfy', cursive",
+        })
+    }
+
   render() {
     let color = this.state.color;
+    let font=this.state.font;
     return (
       <div className="custom">
-          <div id="color" style={{background: color}} onClick={ this.handleModal }></div>
-          <div id='modal'>
-              {/* <div id="close" onClick={this.handleModal}></div> */}
+          <div id="color" style={{background: color}} onClick={ this.handleColorModal }></div>
+          <div id="font" style={{'font-family': font}} style={{color: color}}>Aa</div>
+          <div id='color_modal'>
               <Color coral = {this.handleColorCoral} yellow = {this.handleColorYellow} blue={this.handleColorBlue} pink={this.handleColorPink} green={this.handleColorGreen} orange={this.handleColorOrange} />
+              <Font oswald={this.handleFont1} amatic={this.handleFont2} satisfy={this.handleFont3}/>
           </div>
       </div>
     );
