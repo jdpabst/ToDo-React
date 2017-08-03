@@ -1,0 +1,6 @@
+.list{
+    position: relative;
+    top: 20px;
+    border: 2px solid lime;
+    width: 100%;
+}
