@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Color from './Color/Color.js';
 import Font from './Font/Font';
+import List from './List/List';
 import './Custom.css';
 
 
@@ -142,17 +143,20 @@ class Custom extends Component {
     let font=this.state.font;
     let size = this.state.size;
     return (
-      <div className="custom">
-          <div id="color" style={{background: color}} onClick={ this.handleColorModal }></div>
-          <div id="font" style={{'font-family': font, color: color, 'font-size': size}} onClick={this.handleFontModal} >Aa</div>
-          <div id="check" onClick={ this.handleCheck }><img id="check_img" src="https://vignette3.wikia.nocookie.net/roblox/images/5/57/Very-Basic-Checkmark-icon.png/revision/latest?cb=20131125154354"/></div>
-          <div id='color_modal'>
-              <Color coral = {this.handleColorCoral} yellow = {this.handleColorYellow} blue={this.handleColorBlue} pink={this.handleColorPink} green={this.handleColorGreen} orange={this.handleColorOrange} />
-          </div>
-          <div id="font_modal">
-              <Font ubuntu={this.handleFont1} amatic={this.handleFont2} satisfy={this.handleFont3}/>
-          </div>
-      </div>
+        <div className="custom_list">
+            <div className="custom">
+                <div id="color" style={{background: color}} onClick={ this.handleColorModal }></div>
+                <div id="font" style={{fontFamily: font, color: color, fontSize: size}} onClick={this.handleFontModal} >Aa</div>
+                <div id="check" onClick={ this.handleCheck }><img id="check_img" src="https://vignette3.wikia.nocookie.net/roblox/images/5/57/Very-Basic-Checkmark-icon.png/revision/latest?cb=20131125154354"/></div>
+                <div id='color_modal'>
+                    <Color coral = {this.handleColorCoral} yellow = {this.handleColorYellow} blue={this.handleColorBlue} pink={this.handleColorPink} green={this.handleColorGreen} orange={this.handleColorOrange} />
+                </div>
+                <div id="font_modal">
+                    <Font ubuntu={this.handleFont1} amatic={this.handleFont2} satisfy={this.handleFont3}/>
+                </div>
+            </div>
+            <List font={ this.state.font } color={this.state.color}/>
+        </div>
     );
   }
 }

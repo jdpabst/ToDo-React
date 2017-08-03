@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import Custom from './Custom/Custom'
-import List from './List/List'
 import './New.css';
 
 
@@ -24,7 +23,6 @@ class New extends Component {
       <div className="new">
           <input id='title_input' onChange={ (e) => {this.handleTitle(e.target.value)}} placeholder={ this.state.title }/>
           <Custom/>
-          <List/>
       </div>
     );
   }
