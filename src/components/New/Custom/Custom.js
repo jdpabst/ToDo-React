@@ -14,6 +14,7 @@ class Custom extends Component {
             color: 'white',
             font: "Ubuntu', sans-serif",
             check: true,
+            checkbox: true,
             modal: false
         }
         this.handleColorYellow = this.handleColorYellow.bind(this);
@@ -124,6 +125,7 @@ class Custom extends Component {
                 modal: false,
             })
     }
+        ///////////////////////////// CHECK BOXES /////////////////////////
     handleCheck(){
         if(this.state.check){
             document.getElementById('check_img').style.display = 'block';
