@@ -12,7 +12,7 @@ class Custom extends Component {
         this.state = {
             color: 'white',
             font: "Ubuntu', sans-serif",
-            checkboxes: false,
+            check: true,
             modal: false
         }
         this.handleColorYellow = this.handleColorYellow.bind(this);
@@ -28,6 +28,7 @@ class Custom extends Component {
         this.handleFont3 = this.handleFont3.bind(this);
         this.handleFontModal = this.handleFontModal.bind(this);
         this.closeFontModal = this.closeFontModal.bind(this);
+        this.handleCheck = this.handleCheck.bind(this);
     }
 
     handleColorYellow(){
@@ -122,6 +123,19 @@ class Custom extends Component {
                 modal: false,
             })
     }
+    handleCheck(){
+        if(this.state.check){
+            document.getElementById('check_img').style.display = 'block';
+            this.setState({
+                check: false
+            })
+        } else{
+            document.getElementById('check_img').style.display = 'none';
+            this.setState({
+                check: true
+            })
+        }
+    }
 
   render() {
     let color = this.state.color;
@@ -131,6 +145,7 @@ class Custom extends Component {
       <div className="custom">
           <div id="color" style={{background: color}} onClick={ this.handleColorModal }></div>
           <div id="font" style={{'font-family': font, color: color, 'font-size': size}} onClick={this.handleFontModal} >Aa</div>
+          <div id="check" onClick={ this.handleCheck }><img id="check_img" src="https://vignette3.wikia.nocookie.net/roblox/images/5/57/Very-Basic-Checkmark-icon.png/revision/latest?cb=20131125154354"/></div>
           <div id='color_modal'>
               <Color coral = {this.handleColorCoral} yellow = {this.handleColorYellow} blue={this.handleColorBlue} pink={this.handleColorPink} green={this.handleColorGreen} orange={this.handleColorOrange} />
           </div>

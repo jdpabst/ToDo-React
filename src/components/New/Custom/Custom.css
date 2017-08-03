@@ -1,7 +1,7 @@
 .custom{
-    width: 200px;
-    height: 50px;
-    /* border: 2px solid white; */
+    width: 140px;
+    height: 40px;
+     /* border: 2px solid white;  */
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -31,4 +31,19 @@
 }
 #font_modal{
     display: none;   
+}
+#check{
+    height: 26px;
+    width: 26px;
+    border: 2px solid white;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    filter: brightness(0) invert(1);
+}
+#check img{
+    height: 22px;
+    position: absolute;
+    top: 0;
+    display: none;
 }
