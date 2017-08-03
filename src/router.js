@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Home from './components/Home/Home.js';
 import New from './components/New/New.js';
-// import Previous from './components/Home/Previous/Previous.js';
+
 
 
 export default (
@@ -12,6 +12,6 @@ export default (
         
         <Route component={ Home } path='/' exact />
         <Route component={ New } path='/new' />
-        {/* <Route component={ Previous } path='/previous' /> */}
+        
     </Switch>
 )
