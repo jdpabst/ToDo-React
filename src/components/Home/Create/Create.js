@@ -10,10 +10,10 @@ class Create extends Component {
     return (
       <div className="create"> 
           <section id="word_holder">
+            <Link to='/new'>
               <h2>Create New List</h2>
-              <Link to='/new'>
               <div id='arrow'></div>
-              </Link> 
+            </Link>
           </section>
         
       </div>
