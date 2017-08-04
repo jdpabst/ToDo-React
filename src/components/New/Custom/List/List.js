@@ -9,6 +9,7 @@ class List extends Component {
     super(props);
     this.state = {
       list: [],
+      checked: false
     }
     this.handleList = this.handleList.bind(this);
   }
@@ -21,6 +22,20 @@ class List extends Component {
     this.setState({
       list: arr,
     })
+  }
+
+  handleCheckOff(){
+    if(!this.state.checked){
+      document.getElementById('checkbox_img').style.display = 'block';
+      this.setState({
+        checked: true
+      })
+    } else {
+      document.getElementById('checkbox_img').style.display = 'none';
+      this.setState({
+        checked: false
+      })
+    }
   }
 
   render() {
