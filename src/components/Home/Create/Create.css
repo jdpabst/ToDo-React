@@ -6,8 +6,10 @@
     display: block;
     background: #FE6150;
     position: relative;
-    top: 100px;
+    margin-top: 150px;
+    /* border: 2px solid white; */
 }
+
 #word_holder{
     /* border: 2px solid black; */
     height: 100%;

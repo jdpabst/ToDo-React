@@ -2,13 +2,14 @@
     width: 100%;
     height: auto;
     position: relative;
+    overflow: scroll;
 }
 #lists{
     height: 90px;
     width: 100%;
     background: #C1BE90;
     position: relative;
-    top: 150px;
+    top: 100px;
     margin-top: 10px;
 }
 .list_word_holder{

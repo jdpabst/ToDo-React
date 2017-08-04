@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Create from './Create/Create';
 import Previous from './Previous/Previous';
+import { Link } from 'react-router-dom';
 
 import './Home.css';
   
@@ -19,7 +20,7 @@ class Home extends Component {
     return (
       <div className="home">
         <h1>Welcome!</h1>
-         <Create/> 
+         <Create/>
          <Previous list={ this.state.list }/>
       </div>
     );
