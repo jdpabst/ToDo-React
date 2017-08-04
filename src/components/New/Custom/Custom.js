@@ -154,7 +154,7 @@ class Custom extends Component {
                 <div id="color" style={{background: color}} onClick={ this.handleColorModal }></div>
                 <div id="font" style={{fontFamily: font, color: color, fontSize: size}} onClick={this.handleFontModal} >Aa</div>
                 <div id="check" onClick={ this.handleCheck }><img id="check_img" src="https://vignette3.wikia.nocookie.net/roblox/images/5/57/Very-Basic-Checkmark-icon.png/revision/latest?cb=20131125154354"/></div>
-                <div id='home'></div>
+                <Link to='/'><div id='home'></div></Link>
                 <div id='color_modal'>
                     <Color coral = {this.handleColorCoral} yellow = {this.handleColorYellow} blue={this.handleColorBlue} pink={this.handleColorPink} green={this.handleColorGreen} orange={this.handleColorOrange} />
                 </div>
