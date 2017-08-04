@@ -67,7 +67,7 @@ class List extends Component {
       <div className="list">
         <form onSubmit={ (e) => this.handleList(e)} autoSave="off">
           <input type="checkbox" id="checkbox"/>
-          <input id="list_input" style={{fontFamily: font, fontSize: '30px', color: color}}  type='text'/>
+          <input id="list_input" style={{fontFamily: font, fontSize: '30px', color: color}} placeholder="Start your list here!" type='text'/>
         </form>
         { map }
       </div>
