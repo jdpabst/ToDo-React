@@ -48,7 +48,7 @@ class List extends Component {
       map = arr.map( (item, id) => {
           return <div key={ id }>
             <form onSubmit={ (e) => this.handleList(e)} autoSave="off">
-              <input type="checkbox" id="checkbox"/>
+              <input type="checkbox" style={{display: 'none'}} id="checkbox"/>
               <input id="list_input" style={{fontFamily: font, fontSize: '30px', color: color}}  type='text'/>
             </form>
           </div>
@@ -57,7 +57,7 @@ class List extends Component {
       map = arr.map( (item, id) => {
           return <div key={ id }>
             <form onSubmit={ (e) => this.handleList(e)} autoSave="off">
-              <input type="checkbox" id="checkbox"/>
+              <input type="checkbox" style={{display: 'block'}} id="checkbox"/>
               <input id="list_input" style={{fontFamily: font, fontSize: '30px', color: color}}  type='text'/>
             </form>
           </div>
