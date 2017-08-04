@@ -48,7 +48,7 @@ class List extends Component {
       map = arr.map( (item, id) => {
           return <div key={ id }>
             <form onSubmit={ (e) => this.handleList(e)} autoSave="off">
-              <div id="checkbox" style={{display: 'none'}} onClick={this.handleCheckOff}><img id="checkbox_img" src="https://vignette3.wikia.nocookie.net/roblox/images/5/57/Very-Basic-Checkmark-icon.png/revision/latest?cb=20131125154354"/></div>
+              <input type="checkbox" id="checkbox"/>
               <input id="list_input" style={{fontFamily: font, fontSize: '30px', color: color}}  type='text'/>
             </form>
           </div>
@@ -57,7 +57,7 @@ class List extends Component {
       map = arr.map( (item, id) => {
           return <div key={ id }>
             <form onSubmit={ (e) => this.handleList(e)} autoSave="off">
-              <div id="checkbox" style={{display: 'block'}} onClick={this.handleCheckOff}><img id="checkbox_img" src="https://vignette3.wikia.nocookie.net/roblox/images/5/57/Very-Basic-Checkmark-icon.png/revision/latest?cb=20131125154354"/></div>
+              <input type="checkbox" id="checkbox"/>
               <input id="list_input" style={{fontFamily: font, fontSize: '30px', color: color}}  type='text'/>
             </form>
           </div>
@@ -66,8 +66,7 @@ class List extends Component {
     return (
       <div className="list">
         <form onSubmit={ (e) => this.handleList(e)} autoSave="off">
-           <div id="checkbox"><img id="checkbox_img" src="https://vignette3.wikia.nocookie.net/roblox/images/5/57/Very-Basic-Checkmark-icon.png/revision/latest?cb=20131125154354"/></div> 
-          {/* <input type="checkbox"/> */}
+          <input type="checkbox" id="checkbox"/>
           <input id="list_input" style={{fontFamily: font, fontSize: '30px', color: color}}  type='text'/>
         </form>
         { map }
