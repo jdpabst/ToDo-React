@@ -129,14 +129,14 @@ class Custom extends Component {
     handleCheck(){
         if(this.state.check){
             document.getElementById('check_img').style.display = 'block';
-            document.getElementById('checkbox').style.display = 'block';
+            // document.getElementById('checkbox').style.display = 'block';
             this.setState({
                 check: false,
                 checkbox: false
             })
         } else{
             document.getElementById('check_img').style.display = 'none';
-            document.getElementById('checkbox').style.display = 'none';
+            // document.getElementById('checkbox').style.display = 'none';
             this.setState({
                 check: true,
                 checkbox: true
@@ -161,7 +161,7 @@ class Custom extends Component {
                     <Font ubuntu={this.handleFont1} amatic={this.handleFont2} satisfy={this.handleFont3}/>
                 </div>
             </div>
-            <List font={ this.state.font } color={this.state.color}/>
+            <List font={ this.state.font } color={this.state.color} checkFn={this.handleCheck}/>
         </div>
     );
   }
