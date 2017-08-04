@@ -161,7 +161,7 @@ class Custom extends Component {
                     <Font ubuntu={this.handleFont1} amatic={this.handleFont2} satisfy={this.handleFont3}/>
                 </div>
             </div>
-            <List font={ this.state.font } color={this.state.color} checkFn={this.handleCheck}/>
+            <List font={ this.state.font } color={this.state.color} checkFn={this.state.check}/>
         </div>
     );
   }
