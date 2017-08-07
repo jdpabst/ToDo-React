@@ -21,4 +21,14 @@
     font-family: 'Bowlby One SC', cursive;
     /* border: 2px solid lawngreen; */
 }
+#pop_up{
+    height: 90px;
+    width: 180px;
+    background: black;
+    color: white;
+    opacity: 0.5;
+    padding-top: 10px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
 

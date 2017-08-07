@@ -19,6 +19,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
+        <div id="pop_up">I'm supposed to be a phone app, shrink your screen to see me at my best!</div>
         <h1>Welcome!</h1>
          <Create/>
          <Previous list={ this.state.list }/>
