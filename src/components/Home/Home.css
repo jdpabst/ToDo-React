@@ -31,4 +31,9 @@
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
 }
+@media(max-width: 600px){
+    #pop_up{
+        display: none;
+    }
+}
 
